@@ -1,0 +1,149 @@
+<!-- ----------------  DATOS DEL ESTUDIANTE ------------- -->
+<!-- Nombre: Nahuel Brito   -->
+<!-- Legajo: 110614         -->
+
+<!doctype html> 
+<html lang="es">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <title>Parcial Programacion III</title>
+    <style>
+        #menu{
+            background-color: black;
+        }
+        #menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu ul li {
+            display: inline-block;
+        }
+
+        #menu ul li a {
+            color: red;
+            display: block;
+            padding: 10px 35px;
+            text-decoration: none;
+        }
+        #menu ul li a:hover{
+            background-color:darkorange;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid bg-danger py-5">
+
+        <div class="container text-white">
+            <h1> Hotel Tec</h1>
+            <p class="lead">Bienvenidos a Hotel Tec</p>
+        </div>
+
+    </div>
+
+    
+        <div id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="galeria.html">Galeria de Fotos</a></li>
+                <li><a href="reservas.html">reservas</a></li>
+
+            </ul>
+
+        </div>
+
+
+
+    
+    <br> <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 ">
+               <img src="imagenes/ini.jpg" alt="cocineros" style="float: right;">
+                <p>algun contenido</p>
+            </div>
+            <div class="col-sm-12 col-md-6 ">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, molestiae! Sapiente iure dolorum aliquid molestias sint voluptates laudantium quidem, illum enim animi, quibusdam ipsum perspiciatis. Quibusdam temporibus distinctio itaque mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, repellat? Officiis rerum expedita veritatis veniam nulla aspernatur enim tenetur perferendis reiciendis optio ut, praesentium eaque, cum, doloremque sequi adipisci atque. </p>
+
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="js/bootstrap.js"> </script>
+
+        <script>
+            function validarForm() {
+                let txtNombre = document.getElementById('txtNombre').value;
+                let txtApellido = document.getElementById('txtApellido').value;
+                let txtObservacion = document.getElementById('txtObservacion').value;
+                let valorEdad = document.getElementById('valorEdad').value;
+
+
+
+                if (txtNombre == "") {
+                    alert('Ingrese nombre');
+                    return false;
+                }
+                if (txtApellido === "") {
+                    alert('Ingrese apellido');
+                    return false;
+                }
+                if (txtObservacion === "") {
+                    alert('Ingrese observacion')
+                    return false;
+                }
+                if (isNaN(valorEdad)) {
+                    alert('Ingrese edad en forma de numeros')
+                    return false;
+                }
+                else {
+
+                }
+                let algunoCheckeado = false;
+                let radios = document.getElementsByName('sexo');
+
+                for (let i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        algunoCheckeado = true;
+                        break;
+                    }
+                }
+                if (algunoCheckeado == false) {
+                    alert('Seleccione algun sexo');
+                    return false;
+
+                }
+                return true;
+
+            }
+
+        </script>
+        <script>
+            function grabar() {
+                if (validarForm()) {
+                    alert('validacion exitosa!!!');
+                }
+                else {
+
+                }
+            }
+        </script>
+</body>
+
+</html>

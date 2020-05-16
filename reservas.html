@@ -1,0 +1,186 @@
+
+<!-- Brito Nahuel 110614 -->
+
+<!doctype html>
+<html lang="es">    
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <title>Programacion III</title>
+  <style>
+       #menu {
+            background-color: black;
+        }
+
+        #menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu ul li {
+            display: inline-block;
+        }
+
+        #menu ul li a {
+            color: red;
+            display: block;
+            padding: 10px 35px;
+            text-decoration: none;
+        }
+
+        #menu ul li a:hover {
+            background-color: darkorange;
+        }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container-fluid bg-danger py-5">
+
+    <div class="container text-white">
+      <h1> Hotel Tec</h1>
+      <p class="lead">Bienvenidos a Hotel Tec</p>
+    </div>
+
+  </div>
+
+  <nav>
+    <div id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="galeria.html">Galeria de Fotos</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+
+      </ul>
+
+    </div>
+
+      
+    
+  </nav>
+<br> <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 ">
+        <form action="">
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" class="form-control" id="txtNombre" aria-describedby="nombreAyuda">
+                <small id="nombreAyuda" class="form-text text-muted">Ingrese su nombre </small>
+            </div>
+            <div class="form-group">
+                <label>telefono</label>
+                <input type="text" class="form-control" id="txtTel" aria-describedby="telAyuda">
+                <small id="telAyuda" class="form-text text-muted">Ingrese su telefono </small>
+            </div>
+            <br>
+          <!-- Nombre: <br>
+          <input type="text" id="txtNombre" required><br>
+
+
+          Apellido: <br>
+          <input type="text" id="txtApellido"><br> -->
+
+          Tipo de habitacion <br>
+          <input type="radio" name="tipo" value="single"> single <br>
+          <input type="radio" name="tipo" value="doble"> doble <br>
+          <input type="radio" name="tipo" value="triple"> triple <br>
+          <input type="radio" name="tipo" value="departamento">departamento <br>
+<br>
+          Fecha de ingreso <br>
+          <input type="date" id="fecha">
+          <br>
+          cochera <br>
+          <input type="radio" name="cochera" value="si">si <br>
+          <input type="radio" name="cochera" value="no">no <br>
+
+
+         
+         
+          <br><br><br>
+          <!-- <input type="submit" value="grabar" onclick="grabar();"> -->
+          <input type="submit" class="btn btn-primary" value="Reservar" onclick="grabar();">
+
+          <br><br> 
+
+        </form>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"> </script>
+
+    <script>
+      function validarForm() {
+        let txtNombre = document.getElementById('txtNombre').value;
+        let txtApellido = document.getElementById('txtTel').value;
+        let fecha= document.getElementById('fecha').value;
+        
+
+
+
+        if (txtNombre == "") {
+          alert('Ingrese nombre');
+          return false;
+        }
+        if (txtTel === "") {
+          alert('Ingrese telefono');
+          return false;
+        }
+       
+        if(fecha < Date )
+        {
+          alert('Ingrese fecha posterior a la actual')
+          return false;
+        }
+        else{
+
+        }
+        let algunoCheckeado = false; 
+        let radios = document.getElementsByName('tipo');
+
+        for (let i = 0; i < radios.length; i++) {
+          if (radios[i].checked) { 
+            algunoCheckeado = true;
+            break;
+          }
+        }
+        if (algunoCheckeado == false) {
+          alert('Seleccione algun tipo');
+          return false;
+          
+        }
+        return true;
+
+      }
+
+    </script>
+    <script>
+      function grabar(){
+
+        let nombre = document.getElementById('txtNombre').value;
+        let telefono = document.getElementById('txtTel').value;
+        if(validarForm())
+        {
+          alert('validacion exitosa  '+ nombre+ " !!");
+        }
+        else{
+//alert("error");
+        }
+      }
+    </script>
+</body>
+
+</html>

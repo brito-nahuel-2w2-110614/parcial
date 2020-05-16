@@ -1,0 +1,223 @@
+
+<!-- Brito Nahuel 110614 -->
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <title>Parcial Programacion III</title>
+    <style>
+        #menu {
+            background-color: black;
+        }
+
+        #menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu ul li {
+            display: inline-block;
+        }
+
+        #menu ul li a {
+            color:yellow;
+            display: block;
+            padding: 10px 35px;
+            text-decoration: none;
+        }
+
+        #menu ul li a:hover {
+            background-color: darkorange;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .galeria{
+            font-family: 'open sans';    
+        }
+        .galeria h1{
+            text-align: center;
+            margin: 20px 0 15px 0;
+            font-weight: 300;
+        }
+        .linea{
+            border-top: 5px solid blue;
+        }
+        .contenedor-imagen{
+            display: flex;
+            width: 85%;
+            margin: auto;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border-radius: 3px;
+        }
+        .contenedor-imagenes.contenedor-imagenes{
+            width: 32%;
+            position: relative;
+            height: 250px;
+            margin-bottom: 5px;
+            box-shadow: 0px 0px 3px 0px rgba(blj
+            , green, blue, alpha);
+        }
+        .imagen img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+         
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid bg-danger py-5">
+
+        <div class="container text-white">
+            <h1> Hotel Tec</h1>
+            <p class="lead">Bienvenidos a Hotel tec</p>
+        </div>
+
+    </div>
+
+
+    <div id="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="galeria.html">Galeria de Fotos</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+
+        </ul>
+
+    </div>
+
+
+
+
+    <br> <br>
+
+    <div class="galeria">
+        <h1>Fotos de nuestros Espacio</h1>
+        <div class="linea">
+
+        </div>
+        <div class="contenedor-imagenes">
+            <div class="imagen">
+                <img src="imagenes/frente.jpg" alt="">
+            </div>
+            <div class="imagen">
+                <img src="imagenes/pisina.jfif" alt="">
+            </div>
+            <div class="imagen">
+                <img src="imagenes/cuarto.jfif" alt="">
+            </div>
+            <div class="imagen">
+                <img src="imagenes/cuarto2.jpg" alt="">
+            </div>
+            <div class="imagen">
+                <img src="imagenes/estudiantes.jpg" alt="">
+            </div>
+            <div class="imagen">
+                <img src="imagenes/estudiantes.jpg" alt="">
+            </div>
+            <div class="imagen">
+                <img src="imagenes/estudiantes.jpg" alt="">
+            </div>
+            <div class="imagen">
+                <img src="imagenes/estudiantes.jpg" alt="">
+            </div>
+            <div class="imagen">
+                <img src="imagenes/estudiantes.jpg" alt="">
+            </div>
+            <div class="imagen">
+                <img src="imagenes/estudiantes.jpg" alt="">
+            </div>
+        </div>
+
+
+
+    </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"> </script>
+
+    <script>
+        function validarForm() {
+            let txtNombre = document.getElementById('txtNombre').value;
+            let txtApellido = document.getElementById('txtApellido').value;
+            let txtObservacion = document.getElementById('txtObservacion').value;
+            let valorEdad = document.getElementById('valorEdad').value;
+
+
+
+            if (txtNombre == "") {
+                alert('Ingrese nombre');
+                return false;
+            }
+            if (txtApellido === "") {
+                alert('Ingrese apellido');
+                return false;
+            }
+            if (txtObservacion === "") {
+                alert('Ingrese observacion')
+                return false;
+            }
+            if (isNaN(valorEdad)) {
+                alert('Ingrese edad en forma de numeros')
+                return false;
+            }
+            else {
+
+            }
+            let algunoCheckeado = false;
+            let radios = document.getElementsByName('sexo');
+
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    algunoCheckeado = true;
+                    break;
+                }
+            }
+            if (algunoCheckeado == false) {
+                alert('Seleccione algun sexo');
+                return false;
+
+            }
+            return true;
+
+        }
+
+    </script>
+    <script>
+        function grabar() {
+            if (validarForm()) {
+                alert('validacion exitosa!!!');
+            }
+            else {
+
+            }
+        }
+    </script>
+</body>
+
+</html>
